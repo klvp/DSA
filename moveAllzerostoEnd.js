@@ -33,6 +33,17 @@ function moveDigitstoLeft(arr) {
         }
     }
 }
-moveZerosToEnd(nums)
-moveDigitstoLeft(nums)
+function moveZeroes(arr){
+    let l = 0
+    for(let r = 0; r < arr.length; r++){
+        if(arr[r] != 0){
+            [arr[l],arr[r]] = [arr[r],arr[l]]
+            l++
+        }
+    }
+    return arr
+}
+// moveZerosToEnd(nums)
+// moveDigitstoLeft(nums)
+moveZeroes(nums)
 console.log(nums)
